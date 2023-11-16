@@ -9,6 +9,10 @@ const middlewares = jsonServer.defaults();
 app.use(middlewares);
 app.use(db);
 
+app.get('/', (req, res) => {
+    res.send('Hello');
+})
+
 app.listen(8080, () => {
     console.log('Server is live');
 })
